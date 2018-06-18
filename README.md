@@ -13,7 +13,7 @@ This project is built specifically for Front-End Developer Nanodegree at Udacity
 
 To start using this project follow these steps:
 
-1.  Download or clone from: $ git clone https://github.com/mariorendic/Neighborhood-Map
+1.  Download or clone by: $ git clone https://github.com/mariorendic/Neighborhood-Map.git
 2.  Open the repository `cd Neighborhood-Map`
 3.  Install all dependencies `npm install`
 4.  Start the application `npm start`
