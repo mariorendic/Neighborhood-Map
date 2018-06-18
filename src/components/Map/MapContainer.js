@@ -5,14 +5,14 @@ import { museumPlaces, mapStyles } from "../../lib/constants";
 import axios from "axios";
 import Sidebar from "../Sidebar";
 
-//Handling API errors
+//Handling Gmaps API errors
 document.addEventListener("DOMContentLoaded", function(e) {
   let scriptTag = document.getElementsByTagName('SCRIPT').item(1);
   scriptTag.onerror = function(e) {
-    console.log(':( We have API problem, check back later')
+    console.log(':( We have Google Maps API problem, check back later')
     let mapContainerElemt = document.querySelector('#root');
     let erroElement = document.createElement('div');
-    erroElement.innerHTML = '<div class="error-msg"><span>:(</span> We have API problem, check back later! </div>'
+    erroElement.innerHTML = '<div class="error-msg"><span>:(</span> We have Google Maps API problem, check back later! </div>'
     mapContainerElemt.appendChild(erroElement)
   }
 })
@@ -263,6 +263,7 @@ class MapContainer extends Component {
       })
       .catch(err => {
         console.log("Error", err);
+        infoWindow.setContent(`Foursquare error, please try later.`);
       });
   };
 
