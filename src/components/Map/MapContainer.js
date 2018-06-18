@@ -90,7 +90,6 @@ class MapContainer extends Component {
       // Create info window
       const infoWindow = new google.maps.InfoWindow({ maxWidth: 200 });
 
-      //infoWindow.setOptions({ maxWidth: 300 });
       this.setState({ infoWindow: infoWindow });
 
       // creates a new Google map on the specified configuration set above

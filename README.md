@@ -23,6 +23,6 @@ Developer mode:
 1.  Start the application `npm start`
 2.  Now you can access and use application http://localhost:3000/.
 
-Production mode (to test service worker):
+Production mode (to test service worker as it only works in production mode):
 1.  Start the application `npm run serve`
 2.  Now you can access and use application http://localhost:5000/.
