@@ -16,6 +16,13 @@ To start using this project follow these steps:
 1.  Download or clone by: $ git clone https://github.com/mariorendic/Neighborhood-Map.git
 2.  Open the repository `cd Neighborhood-Map`
 3.  Install all dependencies `npm install`
-4.  Start the application `npm start`
 
-Now you can access and use application http://localhost:3000/.
+To continue starting application chose development or production mode:
+
+Developer mode:
+1.  Start the application `npm start`
+2.  Now you can access and use application http://localhost:3000/.
+
+Production mode (to test service worker):
+1.  Start the application `npm run serve`
+2.  Now you can access and use application http://localhost:5000/.
