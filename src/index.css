@@ -10,3 +10,19 @@ body {
 .toggled {
 	left: -260px!important;
 }
+.error-msg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background: #FF5722;
+}
+.error-msg span {
+    font-size: 4em;
+    margin-bottom: 1em;
+}

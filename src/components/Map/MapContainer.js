@@ -5,6 +5,18 @@ import { museumPlaces, mapStyles } from "../../lib/constants";
 import axios from "axios";
 import Sidebar from "../Sidebar";
 
+//Handling API errors
+document.addEventListener("DOMContentLoaded", function(e) {
+  let scriptTag = document.getElementsByTagName('SCRIPT').item(1);
+  scriptTag.onerror = function(e) {
+    console.log(':( We have API problem, check back later')
+    let mapContainerElemt = document.querySelector('#root');
+    let erroElement = document.createElement('div');
+    erroElement.innerHTML = '<div class="error-msg"><span>:(</span> We have API problem, check back later! </div>'
+    mapContainerElemt.appendChild(erroElement)
+  }
+})
+
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 350px 1fr;
@@ -77,6 +89,7 @@ class MapContainer extends Component {
 
       // Create info window
       const infoWindow = new google.maps.InfoWindow({ maxWidth: 200 });
+
       //infoWindow.setOptions({ maxWidth: 300 });
       this.setState({ infoWindow: infoWindow });
 
@@ -133,8 +146,8 @@ class MapContainer extends Component {
   openInfoWindow = marker => {
     const { map } = this;
     const { infoWindow } = this.state;
-    // Check if the infoWindow is not already opened for this marker
-    if (infoWindow.marker !== marker) {
+
+
       infoWindow.marker = marker;
       infoWindow.setContent(`Loading...`);
       infoWindow.open(this.map, marker);
@@ -143,7 +156,7 @@ class MapContainer extends Component {
       infoWindow.addListener("closeclick", () => {
         infoWindow.setMarker = null;
       });
-    }
+
 
     this.getMarkerDetails(marker);
 
