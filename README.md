@@ -7,7 +7,7 @@ This project is built specifically for Front-End Developer Nanodegree at Udacity
 
 * [Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/tutorial) - Google Maps API which allows to use and style Google Maps.
 * [google-maps-react](https://github.com/google-map-react/google-map-react) - Great NPM library that helps to use Google Maps API in React.
-* [Foursquare API](https://developer.foursquare.com/docs) - Great API which gives a lot of details of places (Pubs/bars in this case).
+* [Foursquare API](https://developer.foursquare.com/docs) - Great API which gives a lot of details of places.
 
 ## Usage
 
